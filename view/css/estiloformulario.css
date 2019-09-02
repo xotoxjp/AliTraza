@@ -1,0 +1,212 @@
+@charset "utf-8";
+/* CSS Document */
+.cuadrogeneral{
+	margin: 50px auto;
+    width: 640px;
+	position: relative;	
+	padding: 20px 20px 20px;
+	width: 900px;
+	background-color: #FFF;
+}
+
+:-moz-placeholder {
+  color: #c9c9c9 !important;
+  font-size: 13px;
+}
+ 
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 13px;
+}
+
+.cuadrogeneral:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+
+.cuadrogeneral h1 {
+  margin: -20px -20px 21px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+  background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+  -webkit-box-shadow: 0 1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+}
+
+input {
+  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  font-size: 14px;
+}
+ 
+input[type=text], input[type=password] {
+  margin: 5px;
+  padding: 0 10px;
+  width: 80px;
+  height: 24px;
+  color: #404040;
+  background: white;
+  border: 1px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 2px;
+  outline: 5px solid #eff4f7;
+  -moz-outline-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+ 
+input[type=text]:focus, input[type=password]:focus {
+  border-color: #4340EC;
+  outline-color: #E1E6F7;
+  outline-offset: 0;
+}
+ 
+#btnfinalizar, input[type=submit] {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  background: #cde5ef;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 16px;
+  outline: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/*estilo al botón */
+input[type=submit]:active , #btnfinalizar:active {
+  background: #cde5ef;
+  border-color: #9eb9c2 #b3c0c8 #b4ccce;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/*estilo al elemento checkbox, para que la aplicación recuerde los datos del usuario*/
+input[type=checkbox],
+input[type=radio] {
+border: 1px solid #c0c0c0;
+margin: 0 0.1em 0 0;
+padding: 0;
+font-size: 16px;
+line-height: 1em;
+width: 1.25em;
+height: 1.25em;
+background: #fff;
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ededed), to(#fbfbfb)); 
+-webkit-appearance: none;
+-webkit-box-shadow: 1px 1px 1px #fff;
+-webkit-border-radius: 0.25em;
+vertical-align: text-top;
+display: inline-block; 
+}
+ 
+input[type=radio] {
+-webkit-border-radius: 2em; /* Make radios round */
+}
+ 
+input[type=checkbox]:checked::after {
+content:"✔";
+display:block;
+text-align: center;
+font-size: 16px;
+height: 16px;
+line-height: 18px;
+}
+ 
+input[type=radio]:checked::after {
+content:"●";
+display:block;
+height: 16px;
+line-height: 15px;
+font-size: 20px;
+text-align: center;
+}
+
+select {
+border: 1px solid #D0D0D0;
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fbfbfb), to(#ededed));
+background: -moz-linear-gradient(19% 75% 90deg,#ededed, #fbfbfb);
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+color: #444;
+} 
+
+
+
+
+/*agregando color al fondo de la página*/
+body {
+	font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+	color: #404040;
+}
+
+#radio1{position: relative; left:10px; top:10px;}
+#radio2{position: relative; left:120px; top:-25px;}
+
+.fila1{border-bottom:1px solid;}
+.fila2{clear:both;border-bottom:1px solid;}
+
+.cuadrogeneral h4 {	text-align: center;}
+
+.spinner {
+  margin: 0px;
+  padding: 1 0px;
+  width: 60px;
+  height: 24px;
+  color: #404040;
+  background: white;
+  border: 2px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 0px;
+  outline: 0px solid #eff4f7;
+  -moz-outline-radius: 0px;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.12);
+}
+
+
+#tabladeTambores{
+        font-size: 11px;  margin: 45px;  width: 400px; text-align: center;  border-collapse: collapse;
+}
+
+th {
+     font-size: 14px; font-weight: bold; padding: 5px; background: #f3f3f3;
+    border-top: 4px solid #D0D0D0; border-bottom: 1px solid #fff; color: #414244;
+}
+
+td {    padding: 8px; background: #FFFAFA; border-bottom: 1px solid #fff;
+    color: #414244;    border-top: 1px solid transparent; }
+
+tr:hover td { background: #EBE5E5; color: #2C2D2F; }
+
+#btnok{position: relative; left:350px; top:-51px; padding:10px; }
+
+.btn{cursor: pointer;}

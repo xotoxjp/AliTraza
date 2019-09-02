@@ -5,27 +5,23 @@ include("../controller/controllerPresupuestos.php");
 <html>
 <head>	
 	<title>Planilla de Presupuesto</title>
-	
   	<link rel='shortcut icon' href='fotos/icono1.ico'>
 	<link href="css/jquery-ui-1.11.4.min.css" rel="stylesheet">
 	<link href="css/estiloformulario.css" rel="stylesheet">
-	<link href="css/muencampo1.css" rel="stylesheet">
-
+	<link href="css/presupuestos.css" rel="stylesheet">
     <script src="js/jquery-1.11.1.js"></script>
 	<script src="js/jquery-1.11.4.ui.min.js"></script>
 	<script src="js/jquery-ui.datepicker-es.js"></script>
-	<script src="js/conexionAjaxCompras.js"></script>
-	<!--script src="js/muencampo1.js"></script-->				
-	
+	<script src="../controller/conexionAjaxCompras.js"></script>	
 </head>
 <style>
 	.ui-autocomplete-loading {
-		background: white url("fotos/ui-anim_basic_16x16.gif") right center no-repeat;
+		background: white url("../view/plugins/css/images/ui-anim_basic_16x16.gif") right center no-repeat;
 	}
 </style>
 <body>
 	<div id="contenedor">
-		<form name='formulario' method='POST' action='cargardatoscompras.php'>
+		<form name='formulario' method='POST' action='../controller/cargardatoscompras.php'>
 		<?
 		$cx_validar = mysql_pconnect($_SESSION["host_acc"],$_SESSION["user_acc"],$_SESSION["pass_acc"]);
 		mysql_select_db($_SESSION["base_acc"]);
@@ -86,18 +82,18 @@ include("../controller/controllerPresupuestos.php");
 			<!-- Codigo para cantidad de tambores -->
 			<div id="TamboresIngresadosSegunPresupuesto">
 				<!-- Tabla de Tambores ingresados por numero de presupuesto -->
-				<p>Rango de Tambores a Agregar: <input type="number" class="spinner" name="tambini" id="rangoini" required/> a <input type="number" class="spinner" name="tambfin" id="rangofin" required/></p>
+				<p>Rango de Muestras a Agregar: <input type="number" class="spinner" name="tambini" id="rangoini" required/> a <input type="number" class="spinner" name="tambfin" id="rangofin" required/></p>
 				<button type='button' id="btnok">Agregar</button>
 				<!-- Fin Codigo para cantidad de tambores -->
 				<!-- Codigo para incluir tabla segun numero de presupuesto-->
 				<div id="contenedorTabla">
 					<table id="tabladeTambores">
 						<tr>
-							<th class='numerico'>Tambor N&ordm</th>
+							<th class='numerico'>Muestra N&ordm</th>
 						    <th class='nombre'>Productor</th> 						    
-						    <th class='nombre'>Tipo Flora</th>
+						    <th class='nombre'>Tipo Producto</th>
 						    <th class="bordetransp"  id="delAll">
-						    	<a href="#"><img src="fotos/undo.png" width="20" height="20"/></a>
+						    	<a href="#"><img src="images/undo.png" width="20" height="20"/></a>
 						    </th> 	
 						</tr>						  
 					</table>
@@ -108,7 +104,6 @@ include("../controller/controllerPresupuestos.php");
 			</div>
 			<br>
 			<input type='Submit' id="cargar" value='Cargar' name='ID' class='btn'	width='1'>
-			 
 			<a href="menu_1b.php"><button type='button' class='btn' id="btnfinalizar">Salir</button></a>
 			<!--<input type='Text' value='Finalizar'  name='ID'   width='1'>-->		
 		</div>
@@ -120,24 +115,16 @@ include("../controller/controllerPresupuestos.php");
 		</form>
 	</div>
 	<input type='hidden' id="mensaje" value='<?php echo $mensaje ?>'>
-	
-	
 	<div style="display:none" id="dialog" title="Aviso">Muestras Cargadas con Exito!</div>
-	
 	<script>
 		$( "#datepicker" ).datepicker({ dateFormat: "yy-mm-dd"});
-				
-
 		$("#rangoini").change(function() {
 		    $("#rangofin").val($(this).val());
 		});
-
 		$( "#lote_env_sec" ).focusout(function(){ 
 			var value = $( this ).val();			
 			recuperarTambores(value)
 		});
-		
-
 		$( "#btnok" ).click(function(){ 
 			var ini = $("#rangoini").val();
 			var fin = $("#rangofin").val();
@@ -147,7 +134,7 @@ include("../controller/controllerPresupuestos.php");
 				chequearExistencia(existen,i);
 				if(existen.propiedad=="no"){
 				 	//console.log("entra en append...");	
-     				$("#tabladeTambores").append('<tr><td class="editar"><input type="text" name="tamb[]" value='+i+'></td><td></td><td><select id="selectfrom" name="selectfrom"><option>Multiflora</option></select></td><td class="bordetransp"  id="del"><a href="#"><img src="fotos/Trash_Can.png" width="20" height="20"/></a></td></tr>');
+     				$("#tabladeTambores").append('<tr><td class="editar"><input type="text" name="tamb[]" value='+i+'></td><td></td><td><select id="selectfrom" name="selectfrom"><option>Multiflora</option></select></td><td class="bordetransp"  id="del"><a href="#"><img src="images/Trash_Can.png" width="20" height="20"/></a></td></tr>');
  				}
  			}
  			//no tiene mucho sentido
@@ -155,11 +142,10 @@ include("../controller/controllerPresupuestos.php");
  			//console.log(filas);
  			var cant_tambores = filas; 			        
   		});
-
   		function chequearExistencia(existen,tambor){
   			var respuesta;
   			$.ajax({
-      			url:"includes/buscarTambor.php",
+      			url:"../controller/buscarTambor.php",
       			type: "POST",
       			async: false,
       			data: {"tambor": tambor},
@@ -173,9 +159,6 @@ include("../controller/controllerPresupuestos.php");
       			}
     		});
 		}
-
-
-
 		// Evento que selecciona la fila y la elimina 
 		$(document).on("click","#del",function(){
 			var parent = $(this).parents().get(0);
@@ -184,11 +167,9 @@ include("../controller/controllerPresupuestos.php");
 			cant_tambores = cant_tambores-1;
 			$("#cant_tambores").val(cant_tambores);
 		});
-
 		$(document).on("click","#delAll",function(){
 			$('#tabladeTambores').find("tr:gt(0)").remove();			
 		});
-       
 		//modal de cargado correctamente
 		$(window).load(function() {
    			var mensaje = $("#mensaje").val();
@@ -205,7 +186,6 @@ include("../controller/controllerPresupuestos.php");
 				});
    			}			
 		}); 
-
 		$(function() {
 		    function split( val ) {
 		      return val.split( /,\s*/ );
@@ -225,7 +205,7 @@ include("../controller/controllerPresupuestos.php");
 		      	.autocomplete({
 			      	delay: 500,
 			        source: function( request, response ) {
-			          $.getJSON( "includes/search_productor.php", {
+			          $.getJSON( "../controller/search_productor.php", {
 			          	term: extractLast( request.term )
 			          }, 
 			          response );
@@ -256,12 +236,11 @@ include("../controller/controllerPresupuestos.php");
 		        	}
 		    	});
 		});
-		
 		//cambia select de salas
 		$('#buscaProductor').click(function(){
         	var sala = $('#sala_asoc').val();
         	$.ajax({
-      			url:"includes/buscaSalaSelect.php",
+      			url:"../controller/buscaSalaSelect.php",
       			type: "POST",
       			async:false,
       			data:"idsala="+$("#sala_asoc").val(),
@@ -270,14 +249,10 @@ include("../controller/controllerPresupuestos.php");
       			}
     		})
     	});
-
-
-
-
 		//select de tipos miel
 	    $('#selectfrom').change(function (){
 			$.ajax({
-      			url:"includes/selectTipoMiel.php",
+      			url:"../controller/selectTipoMiel.php",
       			type: "POST",
       			//data:"idsala="+$("#sala_asoc").val(),
       			success: function(opciones){
