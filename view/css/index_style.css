@@ -1,0 +1,265 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family: Arial; 
+}
+
+header{
+	margin: 2em;
+	width:80em;
+	height:17em;
+	/* background-color: red; */
+}
+
+div.contenedor{
+	width: 180px;
+	height: 210px;
+	float:left;
+	-webkit-transition: height .4s;
+	cursor:pointer;
+}
+
+
+/***** SOLO DIVS *****/ 
+
+div#anaMuestras {
+	background-color: #F5D789;
+	display: none;
+}
+
+div#anaAnalisis{
+	background-color: #f9b966;
+	display: none;
+}
+
+div#anaExt_Acop{
+	background-color: #D8913E;
+	display: none;
+}
+div#anaLogistica{
+	background-color: #f9b966;
+	display: none;
+}
+div#anaReprocesos{
+	background-color:#ef7f3f;
+	display: none;
+}
+
+div#anaStock{
+	background-color: #ce5f2d;
+	display: none;
+}
+
+div#anaOrdEmb{
+	background-color: #dd5d26;
+	display: none;
+}
+
+/*******************************/
+
+div#anaClientes{
+	background-color: #dd5d26;
+	display: none;
+}
+
+div#anaProvedores{
+	background-color: #ce5f2d;
+	display: none;
+}
+
+div#anaAlmacenes{
+	background-color: #D8913E;
+	display: none;
+}
+
+div#anaTipos_Analisis{
+	background-color: #f9b966;
+	display: none;
+}
+div#anaUsuario{
+	background-color: #F5D789;
+	display: none;
+}
+
+
+/*****************************************************************/
+
+/******* SOLO PARA ENLACES ******/
+
+#Muestras {
+	background-color: #F5D789;
+	display: none;
+}
+
+#Analisis{
+	background-color: #f9b966;
+	display: none;
+}
+
+#Ext_Acop{
+	background-color: #D8913E;
+	display: none;
+}
+#Logistica{
+	background-color: #f9b966;
+	display: none;
+}
+#Reprocesos{
+	background-color: #ef7f3f;
+	display: none;
+}
+
+#Stock{
+	background-color: #ce5f2d;
+	display: none;
+}
+
+#OrdEmb{
+	background-color: #dd5d26;
+	display: none;
+}
+/*******************************/
+
+#Clientes{
+	background-color: #dd5d26;
+	display: none;
+}
+
+#Provedores{
+	background-color: #ce5f2d;
+	display: none;
+}
+
+#Almacenes{
+	background-color: #D8913E;
+	display: none;
+}
+
+#Tipos_Analisis{
+	background-color: #f9b966;
+	display: none;
+}
+
+#usuario{
+	background-color: #F5D789;
+	display: none;
+}
+
+img.icon{
+	display: block;
+	margin:25px auto;
+	background-color: rgba(255,255,255,.15);
+	width:40px;
+	padding:20px;
+	-webkit-border-radius: 50%;
+	-webkit-box-shadow: 0px 0px 0px 30px rgba(255,255,255,0);
+	-webkit-transition:box-shadow .4s;
+}
+
+p.texto{
+	font-size: 1.2em;
+	color:white;
+	text-align: center;
+	padding-top:10px;
+	opacity: .6;
+	-webkit-transition: padding-top .4s;
+}
+
+div.contenedor:hover{
+	height:250px;
+}
+
+div.contenedor:hover p.texto{
+	padding-top: 30px;
+	opacity: 1;
+}
+
+div.contenedor:hover img.icon{
+	-webkit-box-shadow:0px 0px 0px 0px rgba(255,255,255,.6);
+}
+
+
+a {
+  display:none;
+  font: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color:#400E0E;
+}
+
+
+body {
+	/*imagen de fondo del menu*/
+    background-image: url("../images/backgroundimg.jpg");
+    background-size: auto;
+  background-position: top center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
