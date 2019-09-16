@@ -1,0 +1,45 @@
+body{font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif; /*background-color: black;*/ }
+#tablaconfirm,th,td{ padding: 10px; text-align: center; border-collapse: collapse;}
+
+td{border: solid 1px black; }
+th{background: grey; border: 1px solid black; }
+
+
+
+.bordetransp{border:none;}
+#tablaconfirm{position: relative;left: 10px;}
+
+#botonera{position: relative; left: 500px; top: 20px;}
+.boton{padding: 15px; border-radius: 5px; margin-left: 10px;}
+
+#tambores_seleccionados{background: white; margin: 10px; width: 700px; height: 2px;padding: 5px;}
+
+
+/*sergio nuevo */
+#muestra{
+  padding: 20px;
+}
+#tablaAnaRestantes{
+  position: relative;
+  margin-left: 20px;
+  margin-top: 100px;
+}
+#espacioBlanco{
+  visibility: hidden;
+}
+#oculto{
+  /*visibility: hidden;*/
+  display: none;
+}
+#datos{
+  margin-left: 5px; 
+  margin-top: 100px;
+}
+
+tr:hover {background-color: #E6E68A};
+
+#imglink{
+  background-image:url("fotos/icon-no.gif");
+  width:20px; height:20px;
+    display:block;
+}

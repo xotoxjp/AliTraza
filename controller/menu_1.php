@@ -139,9 +139,9 @@ if ($i>0) {echo "<FONT COLOR='#FF0000'>Tiene notas sin leer. Saludos</FONT>";}
 ?>
 
 <table border=0 width="100%"><tr><td width=20%>&nbsp;</td><td align="center" width=60%>
-  <img src="fotos/logop.jpg" alt="Logo de la Empresa" width="350"/></td>
+  <img src="../view/images/logop.jpg" alt="Logo de la Empresa" width="350"/></td>
 
-<? echo '<td align="middle" width=20%><img src="fotos/'.$_SESSION["acceso_logg"].'.JPG" alt=" " width="28"/>&nbsp;&nbsp;';
+<? echo '<td align="middle" width=20%><img src="../view/images/'.$_SESSION["acceso_logg"].'.JPG" alt=" " width="28"/>&nbsp;&nbsp;';
    $l = date("Y-m-d H:i:s"); $l=0+substr($l,11,2); if (($l>=6) and ($l<12)) {echo 'Bu&eacute;n d&iacute;a '.$m;}
    if (($l>=12) and ($l<20)){echo 'Buenas tardes '.$m;} if ( (($l>=20) and ($l<=24)) or $l<6){echo 'Buenas Noches '.$m;}
 ?>

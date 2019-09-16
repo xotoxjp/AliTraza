@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+body {
+	font-family:Arial;
+	font-size: 11pt;			
+}
+
+#general{
+position: absolute;
+border-radius: 20px;
+background:white;
+border: 8px solid #DCDCDC;
+width: 800px;
+height: 680px;
+margin-left: 250px;
+margin-top: 20px;
+padding:10px;
+box-shadow: 10px 10px 5px #888888;
+}
+#contenedor1{	
+background: white;
+border-bottom: 1px solid #DCDCDC;
+padding-left: 5px;
+padding-top: 5px;
+padding-bottom: 70px;
+padding-right: 100px;
+width: 700px;
+height: 10px;
+}
+#contenedor2{
+float: left; 
+border-right: 5px solid #DCDCDC;
+border-bottom: 1px solid #DCDCDC;
+background: white;
+padding-left: 50px;
+padding-top: 20px;
+padding-bottom: 140px;
+padding-right: 50px;
+height: 340px;
+width: 170px;
+}	
+#contenedor3{
+background: white;
+border-bottom: 1px solid #DCDCDC;
+margin-left: 250px;
+padding-left: 50px;
+padding-top: 50px;
+padding-bottom: 150px;
+padding-right: 10px;
+height: 300px;
+}
+#col1{ 
+ float:left;
+ padding: 5px;
+ height: 350px;
+ width: 500px; 
+ overflow: scroll;
+}
+#col2{ 
+ float:left;
+ margin-top: -50px;
+ margin-left: 20px;
+}
+#cabecera2{
+background: #B0c0c0;
+text-align: center;
+margin: 10px; 
+}
+#cabecera3{
+background: #B0c0c0;
+text-align: center;
+}
+#tituloeleccion{
+  background:#B0c0c0;	
+}
+#btneleccion{
+text-align: center;
+border-bottom: 3px solid #DCDCDC;
+padding-bottom: 10px;
+margin-bottom: 20px;
+margin-top: -50px;	
+}
+img{
+ width:180px;
+ padding-bottom: 30px;
+ margin-bottom: 20px; 
+ height:150px;
+ border: 2px solid #B0c0c0;
+ border-radius: 10px;
+}
+#accion{
+  text-align: center;	
+}
+input[type=checkbox]:checked::after{
+content:"✔";
+display:block;
+text-align: center;
+font-size: 16px;
+height: 16px;
+line-height: 18px;
+} 
+
+input[type=checkbox] {
+border: 1px solid #c0c0c0;
+margin: 2px;
+padding: 0;
+font-size: 16px;
+line-height: 1em;
+width: 1.25em;
+height: 1.25em;
+background: #fff;
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ededed), to(#fbfbfb)); 
+-webkit-appearance: none;
+-webkit-box-shadow: 1px 1px 1px #fff;
+-webkit-border-radius: 0.25em;
+vertical-align: text-top;
+display: inline-block; 
+}
+/* opccion para ver los tambores elegidos */
+#afuera{
+margin-left: 250px;	
+width: 810px;
+height: 100px;
+text-align: center;
+border: 8px solid #DCDCDC;
+border-radius: 15px;
+background: white;
+box-shadow: 10px 10px 5px #888888;
+overflow: scroll;	
+}
+#texto{
+  font-size: 30px;  
+}
+.btn{
+	padding: 10px;
+	border-radius: 5px;
+}

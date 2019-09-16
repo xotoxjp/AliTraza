@@ -189,7 +189,7 @@ a {
 
 body {
 	/*imagen de fondo del menu*/
-    background-image: url("../images/backgroundimg.jpg");
+   /*  background-image: url("../images/backgroundimg.jpg"); */
     background-size: auto;
   background-position: top center;
 }

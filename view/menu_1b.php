@@ -1,27 +1,15 @@
 <?php
-session_start();
-include_once("../controller/funciones.php");
-$_SESSION["level_req"]="a";
-$logg = $_SESSION["acceso_logg"];
-$pass =$_SESSION["acceso_pass"];
-
-validar($logg,$pass);
-
-$nivel_dato=$_SESSION["acceso_acc"];
-$id_usuario=$_SESSION["id_usuario"];
-$id_menu=$_SESSION["menu"];
-
-if ($id_menu!="Botones"){
-	header("Location: menu_1.php");
-}
+include("../controller/funciones.php");
+include("../controller/controllerMenu.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	 <title><?php echo $_SESSION["acceso_logg"]."&nbsp&nbsp";?>MENU </title>
 	 <meta name="viewport" content="width=device-width,initial-scale=1">             
 	 <meta charset="utf-8" />
-	 <link rel="shortcut icon" href="fotos/menu.ico"> 
+	 <!-- <link rel="shortcut icon" href="fotos/menu.ico">  -->
 	 <link rel="stylesheet" href="css/index_style.css" /> 
  </head>
  
@@ -35,7 +23,7 @@ if ($id_menu!="Botones"){
 			</div>
 			<div class="contenedor" id="anaAnalisis">
 				<img class="icon" src="images/labo.png">
-				<p class="texto"><a href="analisis1.php" id="Analisis" >Laboratorio</a></p>
+				<p class="texto"><a href="laboratorio.php" id="Analisis" >Laboratorio</a></p>
 			</div>
 			<div class="contenedor" id="anaExt_Acop">
 				<img class="icon" src="images/ordencompra.png">
@@ -60,48 +48,31 @@ if ($id_menu!="Botones"){
 		</div>
 	</div>
 </header>
-
     
-<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-<script type="text/javascript" >
-	var id_usuario = "<?php echo $id_usuario; ?>"; 
-	$.getJSON("consultaMenu.php?id="+id_usuario, function(data){  
-		for(var i in data){
-			// el dato es de tipo json es accesible mediante el punto y la palabra pantalla que es el nombre de la columna 
-			//que esta en la tabla accesos_op en BD
-			var id = data[i].pantalla;
-			//console.log(id);
-			//ACLARACION:
-			// El if que agregue pregunta por el acceso porque es en el mismo momento,
-			// o sea en el la misma variable i (del for) que recorre cuando obtengo la pantalla y
-			// tambiem obtengo el acceso.
-			// El acceso pertenece a la misma fila obtenida de la BD con lo cual si el acceso no esta 
-			// encendido ('on') en la BD, no mostrara la puerta de acceso a la pantalla.    
-			var acceso = data[i].acceso;				
-			console.log(acceso);
-            if(acceso=='on'){
-				/* divs */
-				$("#ana"+id).css("display","inline");
-	            /* enlaces*/
-				$("#"+id).css("display","inline");
-				if (i == 4){
-					if (id_usuario == 25){
-						/* divs */
-						$("#anaUsuario").css("display","inline");
-						/* enlaces*/
-						$("#usuario").css("display","inline");
-					}
-				}
-			}	
-		}	
-   });
-	
-	
-	$(".contenedor").click(function() {
-		var currentId = $(this).attr('id');
-		window.location = $(this).find("a").attr("href"); 
-		return false;
-	});
+<script type="text/javascript" src="plugins/js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script>
+var id_usuario = "<?php echo $id_usuario; ?>"; 
+
+
+$.getJSON("../controller/consultaMenu.php?id="+id_usuario, function(data){  
+    for(var i in data){
+        var id = data[i].pantalla;   
+        var acceso = data[i].acceso;				
+        console.log(acceso);
+        if(acceso=='on'){
+            $("#ana"+id).css("display","inline");
+            $("#"+id).css("display","inline");
+            if (i == 4){
+                if (id_usuario == 25){
+                    $("#anaUsuario").css("display","inline");
+                    $("#usuario").css("display","inline");
+                }
+            }
+        }	
+    }	
+});
+
 </script>
 
 </body>    

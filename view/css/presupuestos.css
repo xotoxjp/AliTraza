@@ -6,7 +6,7 @@
 	#buscar{position: absolute; top:308px; left:530px; }
 
   	.ui-autocomplete-loading {
-    	background: url('plugins/images/ui-anim_basic_16x16.gif') right center no-repeat;
+    	background: url('plugins/css/images/ui-anim_basic_16x16.gif') right center no-repeat;
     }
     .ui-autocomplete{
     	z-index: 9999 !important;
