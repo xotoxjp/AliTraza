@@ -9,7 +9,7 @@ include("../controller/controllerLaboratorio.php");
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="shortcut icon" href="images/matraz.jpg">
 	<link href='plugins/css/jquery-ui-1.11.4.min.css' rel='stylesheet' type='text/css'/>
-	<link href='plugins/css/jquery-ui-custom.css' rel='stylesheet' type='text/css'/>   
+	<link href='plugins/css/jquery-ui-custom.css' rel='stylesheet' type='text/css'/>
 	<link href='plugins/css/ui.jqgrid.css' rel='stylesheet' type="text/css"/>
 	<link href="plugins/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href='css/laboratorio.css' rel='stylesheet' type='text/css'/>
@@ -40,8 +40,7 @@ include("../controller/controllerLaboratorio.php");
 			</ul>      
 		</div>
 	    <div id="seleccion">
-	    	<h3 id=""> Seleccion tipo de Muestra </h3>	
-	    								
+	    	<h3 id=""> Seleccion tipo de Muestra </h3>
 			<select name='' id='selMuestra'>
 				<option value='0'>Selecciona una Opción</option>			
 				<option value='EXT'>ESPERANDO DEFINICION DE ANALISIS</option>
@@ -80,10 +79,10 @@ include("../controller/controllerLaboratorio.php");
 	<script src='plugins/js/jquery-1.11.1.js'></script>
 	<script src='plugins/js/jquery.jqGrid.min.js'></script>
 	<script src='plugins/js/grid.locale-es.js'></script>
-    <script src="plugins/js/jquery.hashchange.min.js" type="text/javascript"></script>
-    <script src="plugins/js/jquery.easytabs.min.js" type="text/javascript"></script>
+    <script src="plugins/js/jquery.hashchange.min.js"></script>
+    <script src="plugins/js/jquery.easytabs.min.js"></script>
 	<script src="plugins/js/bootstrap.min.js"></script>
-	<script src="js/motorLaboratorioPistol.js" type="text/javascript"> </script> 
-	<script src="js/motorLaboratorio.js" type="text/javascript"> </script>
-    <script src="js/laboratorio.js" type="text/javascript"> </script>
+	<script src="js/motorLaboratorioPistol.js"> </script> 
+	<script src="js/motorLaboratorio.js"> </script>
+    <script src="js/laboratorio.js"> </script>
 </html>

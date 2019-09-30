@@ -260,7 +260,7 @@ $("#volver").click(function() {
 //$("#fecha_analisis").datepicker({ format:'yyyy-mm-dd'});
 $("#exportarExcel").click(function(){
   var tam = $("#tam").val();
-  location.href="labaxls.php?muestras="+tam;
+  location.href="../controller/labaxls.php?muestras="+tam;
 }); 
 $("#guardar").click(function(){        
     grabarTodoTabla();
