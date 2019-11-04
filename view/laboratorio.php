@@ -1,5 +1,6 @@
 <?php
 include("../controller/controllerLaboratorio.php");
+include("../controller/updateCategorias.php");
 ?>
 <!DOCTYPE html>
 <head>
@@ -20,9 +21,7 @@ include("../controller/controllerLaboratorio.php");
 			<img src="images/salir.png" width="20" height="20"/><a href="../controller/menu_1.php" title="volver">Volver al men&uacute principal</a>
 		</div>
 		<h2>Datos de Laboratorio</h2>
-		<div style="padding:30px;border:2px solid darkgrey;width:40rem;height:5rem;background:skyblue;display:none;" id ="c">
-			NO HA SELECCIONADO NINGUNA MUESTRA AUN!
-		</div>	    
+   
 		<div id='botonera_Analisis'>
 			<ul>
 			<?php if (($login=='amt') || ($login=='lab')){  ?>
@@ -74,7 +73,32 @@ include("../controller/controllerLaboratorio.php");
 			<img src="images/salir.png" width="20" height="20"/><a href="../controller/menu_1.php" title="volver">Volver al men&uacute principal</a>
 		</div>
     </div>
-	<input type='hidden' id="currentUser" value='<?php echo $login ?>'>	
+	<input type='hidden' id="currentUser" value='<?php echo $login ?>'>
+	
+
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Advertencia</h4>
+			</div>
+			<div class="modal-body">
+				<p>NO HA SELECCIONADO NINGUNA MUESTRA AUN!</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+			</div>
+		</div>
+	</div>
+
+<!--<div style="padding:30px;border:2px solid darkgrey;width:40rem;height:5rem;background:skyblue;display:none;" id ="c">
+			NO HA SELECCIONADO NINGUNA MUESTRA AUN!
+	</div>	  -->
+
 </body>
 	<script src='plugins/js/jquery-1.11.1.js'></script>
 	<script src='plugins/js/jquery.jqGrid.min.js'></script>

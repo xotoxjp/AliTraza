@@ -92,11 +92,13 @@
 	 		return a-b;
 	 		});
 			location.href='definicionAnalisis.php?tambores='+tamselect;			
-		 }
-		 else{
-		 	$("#c").show(300).delay(1000).hide(3000);
-		 	//$("#c").html("<strong>NO HA SELECCIONADO NINGUNA MUESTRA AUN!</strong>");
-		 }
+		}
+		else{
+		 	//$("#c").show(300).delay(1000).hide(3000);
+			//$("#c").html("<strong>NO HA SELECCIONADO NINGUNA MUESTRA AUN!</strong>");
+			console.log("Modal de Labo Pistol!");
+			$("#myModal").modal({show: true});	
+		}
 	});
 	
 	
@@ -107,9 +109,14 @@
 	 	var registrar = "registrar";
 	 	var tamselect = idsOfSelectedRows.sort(function(a,b){
 	 		return a-b;
-	 	});
-	 	console.log(tamselect);
-	 	location.href='edicionMuestra.php?quiero='+registrar+'&tambores='+ tamselect ;
+		 });
+	 	//console.log(tamselect);
+		if(tamselect>0){
+			location.href='edicionMuestra.php?quiero='+registrar+'&tambores='+ tamselect ;
+		}else{
+			$("#myModal").modal({show: true});
+		}
+		 
 	});	
 	
     //ver
@@ -119,6 +126,10 @@
 	 	var ver = "ver";
 	 	var tamselect = idsOfSelectedRows.sort(function(a,b){
 	 		return a-b;
-	 	});
-	 	location.href='edicionMuestra.php?quiero='+ver+'&tambores='+ tamselect;
+		});
+		if(tamselect>0){
+			location.href='edicionMuestra.php?quiero='+ver+'&tambores='+ tamselect;
+		}else{
+			$("#myModal").modal({show: true});
+		}
 	});

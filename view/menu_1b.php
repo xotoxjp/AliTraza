@@ -25,10 +25,10 @@ include("../controller/controllerMenu.php");
 				<img class="icon" src="images/labo.png">
 				<p class="texto"><a href="laboratorio.php" id="Analisis" >Laboratorio</a></p>
 			</div>
-			<div class="contenedor" id="anaExt_Acop">
+<!-- 			<div class="contenedor" id="anaExt_Acop">
 				<img class="icon" src="images/ordencompra.png">
 				<p class="texto"><a href="extaco1.php" id="Ext_Acop" >Orden de Compra</a></p>
-			</div>
+			</div> -->
 	</div>
 </header>
 	
@@ -40,21 +40,22 @@ include("../controller/controllerMenu.php");
 		</div>
 		<div class="contenedor" id="anaAlmacenes">
 			<img class="icon" src="images/depositos2.png">
-			<p class="texto"><a href="almacenes1.php" id="Almacenes" >Depósitos y Salas</a></p>
+			<p class="texto"><a href="tablasAccesorias.php" id="Almacenes" >Depósitos y Salas</a></p>
+		</div>
+		<div class="contenedor" id="anaTipos_Analisis">
+			<img class="icon" src="images/laboratorio.png">
+			<p class="texto"><a  href="tiposAnalisis.php" id="Tipos_Analisis" >Tipos de Analisis</a></p>
 		</div>
 		<div class="contenedor" id="anaUsuario">
 			<img class="icon" src="images/users.png">
-			<p class="texto"><a href="controlador/usuario.php" id='usuario'>Usuarios</a></p>
+			<p class="texto"><a href="userMngmnt.php" id='usuario'>Usuarios</a></p>
 		</div>
 	</div>
 </header>
-    
 <script type="text/javascript" src="plugins/js/jquery-1.11.1.js"></script>
 <script type="text/javascript" src="js/menu.js"></script>
 <script>
 var id_usuario = "<?php echo $id_usuario; ?>"; 
-
-
 $.getJSON("../controller/consultaMenu.php?id="+id_usuario, function(data){  
     for(var i in data){
         var id = data[i].pantalla;   
@@ -72,8 +73,6 @@ $.getJSON("../controller/consultaMenu.php?id="+id_usuario, function(data){
         }	
     }	
 });
-
 </script>
-
 </body>    
 </html>

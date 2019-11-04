@@ -120,7 +120,10 @@ jQuery("#listsg11").jqGrid({
 		    location.href='definicionAnalisis.php?tambores='+selectedRowId;			
 		 }
 		 else{
-		 	$("#c").show(300).delay(1000).hide(3000);
+			 //$("#c").show(300).delay(1000).hide(3000);
+			console.log("Modal de Labo comun!");
+			$("#myModal").modal({show: true});
+			
 		 }	 		
 		});
 		//grabar envia muestras seleccionadas para su edicion de analisis

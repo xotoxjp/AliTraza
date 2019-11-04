@@ -56,7 +56,11 @@
     $start = $limit*$page - $limit; // do not put $limit*($page - 1) 
     $SQL = 'SET character_set_results=utf8';
     $result = mysql_query( $SQL ) or die("Couldn't execute query.".mysql_error());
-    $SQL = "SELECT * FROM provedores ".$where."ORDER BY $sidx $sord LIMIT $start , $limit"; 
+
+    $SQL ="SELECT `prov_id`,`razon_social`,`dir1`,`dir2`,`Localidad`,`cod_postal`,`provincia`,`pais`,`cond_iva`,`nro_cuit`,`ret_iva`,`ret_gan`,`ret_bru`,`contacto`,`tel`,`cel`,`fax`,`nextel`,`email`,`sector`,`contacto1`,`tel1`,`cel1`,`email1`,`sector1`,`contacto2`,`tel2`,`cel2`,`email2`,`sector2`,`lat`,`lon`,`c1`,`c2`,`c3`,`campos_reg`,`colmenas_reg`,`abrev`,`fecha_alta`,score.calidad FROM provedores as prod 
+    LEFT JOIN scoring as score on prod.prov_id= score.productorID ".$where."ORDER BY $sidx $sord LIMIT $start , $limit";
+    //echo $SQL;
+    // $SQL = "SELECT * FROM provedores ".$where."ORDER BY $sidx $sord LIMIT $start , $limit"; 
     $result = mysql_query( $SQL ) or die("Couldn t execute query.".mysql_error());
     $responce= new stdClass();
 	$responce->page = $page;
@@ -65,7 +69,7 @@
     $i=0;
     while($row = mysql_fetch_array($result,MYSQL_ASSOC)) { 
         $responce->rows[$i]['id']=$row['prov_id'];
-        $responce->rows[$i]['cell']=array($row['prov_id'],$row['razon_social'],$row['c1'],$row['dir1'],$row['Localidad'],$row['provincia'],$row['contacto'],$row['email'],$row['tel'],""); 
+        $responce->rows[$i]['cell']=array($row['prov_id'],$row['razon_social'],$row['c1'],$row['dir1'],$row['Localidad'],$row['provincia'],$row['contacto'],$row['email'],$row['tel'],$row['calidad'],""); 
         $i++;
     } 
     echo json_encode($responce);

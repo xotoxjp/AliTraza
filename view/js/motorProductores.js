@@ -1,17 +1,18 @@
 jQuery("#rowed2").jqGrid({
     url:'../controller/grid/serverprod.php?q=3',
  datatype: "json",
-    colNames:['ID','RAZON SOCIAL','RENAPA', 'DIRECCION', 'LOCALIDAD','PROVINCIA','CONTACTO','E-MAIL','TELEFONO'], 
+    colNames:['ID','RAZON SOCIAL','RENAPA', 'DIRECCION', 'LOCALIDAD','PROVINCIA','CONTACTO','E-MAIL','TELEFONO','CALIDAD'], 
  colModel:[ 
      {name:'id',index:'id', hidden:true}, 
-     {name:'razon_social',index:'razon_social', width:190,classes: 'cvteste',editable:true}, 
-     {name:'renapa',index:'c1', width:80,classes: 'cvteste',editable:true}, 
-     {name:'dir1',index:'dir1', width:220,classes: 'cvteste',editable:true},
-     {name:'Localidad',index:'Localidad', width:160,classes: 'cvteste',editable:true},
-     {name:'provincia',index:'provincia', width:100, classes: 'cvteste',editable:true},
-     {name:'contacto',index:'contacto', width:180, sortable:false,classes: 'cvteste',editable:true},
-     {name:'email',index:'email', width:200, sortable:false,classes: 'cvteste',editable:true},
-     {name:'tel',index:'tel', width:120, sortable:false,classes: 'cvteste',editable:true}						
+     {name:'razon_social', index:'razon_social', width:190,classes: 'cvteste', editable:true}, 
+     {name:'renapa', index:'c1', width:80, classes: 'cvteste', editable:true}, 
+     {name:'dir1', index:'dir1', width:220, classes: 'cvteste', editable:true},
+     {name:'Localidad', index:'Localidad', width:160,classes: 'cvteste', editable:true},
+     {name:'provincia', index:'provincia', width:100, classes: 'cvteste', editable:true},
+     {name:'contacto', index:'contacto', width:180, sortable:false, classes: 'cvteste', editable:true},
+     {name:'email', index:'email', width:200, sortable:false, classes: 'cvteste', editable:true},
+     {name:'tel', index:'tel', width:120, sortable:false, classes: 'cvteste', editable:true},
+     {name:'calidad', index:'calidad', width:120,classes: 'cvteste', editable:false}						
  ],
     rowNum:10,
     rowList:[10,20,30],

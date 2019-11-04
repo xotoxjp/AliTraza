@@ -1,0 +1,39 @@
+th{
+  background: grey;
+  font-size: 20px;
+  color: white;
+  text-align: center;   
+}
+#color{
+  margin-top: 60px;
+  margin-right: 70px;
+  margin-left: 70px;
+  margin-bottom: 10px;
+  /* background : orange; */
+  /* border : 1px solid darkorange; */
+  /* color: white; */
+  border-radius: 5px;
+}
+tr:hover{
+   /* background: yellow;  */
+   background: #7DCBFF;
+}
+.sel{
+  background-color:#fbec88 ;
+}
+#volver{
+  background: darkgrey;
+  color:white;
+}
+.oculto{
+  display: none;  
+}
+.botonera{
+  margin-top:20px;
+  margin-left: 400px;
+}
+.botonera input{  
+  font-size: 15px;
+  width: 90px;
+  height: 40px;
+}

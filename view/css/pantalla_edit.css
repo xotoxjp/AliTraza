@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+body{background-color: #666;font-family: Verdana, Geneva, sans-serif;}
+#ent{display: none;}
+.hide {display:none;}
+.show {display:block;}
+#contenedorForm{background-color: #FFF; margin:auto; position:absolute; left:25%;}
+#botonera{position:relative; left:18%;cursor: pointer;}

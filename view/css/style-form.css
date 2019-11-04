@@ -1,0 +1,13 @@
+
+h3{ text-align: center; }
+
+#contenedor{
+  background: black;
+  opacity: 0.6;
+  border: 5px solid lightgrey; 
+  height: 300px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 100px;
+  color:white;
+}

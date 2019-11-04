@@ -1,15 +1,13 @@
 <?php
   include("grid/config.php");
-  mysql_select_db("chmiel");
   $a1="SELECT cod_anal_id,nomencl FROM analitico_inf WHERE cod_anal_id <= 21";
   $r1 = mysql_query($a1,$cx_validar); 
- 
   /* lo dejo por las dudas que lo necesite */
   foreach( $_POST as $indice => $value){
     //echo "$indice : $value<br>";
     switch ($indice) {
     //case "alm_toma": $alm_toma = $value;
-                      //break;
+    //break;
     case "almacen_id": $almacen_id = $value;                
                       break;
     case "prioridad": $prioridad = $value;
@@ -17,7 +15,7 @@
     case "fecha": $fecha = $value;
                       break;
     //case "hora": $hora = $value;
-      //break;
+    //break;
     case "tamborescadena": $tamborescadena = $value;
                       break;  
     case "ch": $ch = $value;
@@ -31,11 +29,9 @@
   for ($i=0; $i < $cantidad; $i++) { // recorre cada tambor
     $adic=''; 
     for($j=0; $j < count($ch); $j++){// recorre cada analisis
-       
        $sql1= " INSERT INTO analisis (id_tambor,cod_analisis_id,id_almacen_lab) VALUES (".$vector[$i].",".$ch[$j].",".$almacen_id.")";
        //echo "$sql1<br>";
        mysql_query($sql1,$cx_validar);
-       
        //echo ' vector de analisis:  '.$ch[$j].'';
        //echo '<br>';
        if ($ch[$j]>=5) {

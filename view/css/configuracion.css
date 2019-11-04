@@ -1,0 +1,52 @@
+table,td,th {
+  border-collapse: collapse;      
+  border: 1px solid grey;
+  text-align: center;
+  background:white;	  
+border: 2px solid lightgrey;       
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 100px;
+}	
+#botonera{
+  margin-left: 500px;     
+  margin-top: 30px;
+}
+h4{
+  margin-left: 200px;
+  margin-right: 200px;         	
+}    
+input{
+	width: 30px;
+	height: 30px;
+}
+#cabecera{
+  margin-top: 60px;
+  margin-right: 70px;
+	margin-left: 70px;
+	margin-bottom: 10px;
+	background : orange;
+	border : 1px solid darkorange;
+	color: white;
+}
+th{
+	font-size: 20px;
+	margin-top: 60px;
+  margin-right: 70px;
+  margin-left: 70px;
+  margin-bottom: 10px;
+  background : cornflowerblue;
+  border : 1px solid darkgrey;
+  color: white;
+}
+#guardar,#volver{
+	width: 100px;
+	height: 40px;
+}
+.color{
+	background:cornflowerblue;
+	border: 2px solid black ;
+}
+#especial{
+  background: darkgrey;
+}           

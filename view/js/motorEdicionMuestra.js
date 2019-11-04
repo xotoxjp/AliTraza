@@ -79,7 +79,7 @@ $(document).ready(function(){
                             }
                         }
                         else{
-                            fila +='<td><b><img src="fotos/tubeno.png" width=30px height=30px /></b></td>';
+                            fila +='<td><b><img src="images/tubeno.png" width=30px height=30px /></b></td>';
                         }    
                     }//fin for codigos
                     //cambia al cargar la segun muestra
@@ -242,7 +242,7 @@ function grabarTodoTabla(){
       data: INFO,
       type: 'POST',
       dataType: 'json',
-      url:'includes/guardarAnaSeleccionados.php?fecha='+fechaAnalisis,
+      url:'../controller/guardarAnaSeleccionados.php?fecha='+fechaAnalisis,
       processData: false, 
       contentType: false,
       success: function(r){

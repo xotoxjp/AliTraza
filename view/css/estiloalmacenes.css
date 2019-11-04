@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{width:100%;padding:0px;margin:0px;}
+.wrapper{
+	margin-top: 30px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 50px;
+}
+.cvteste{
+	/*formato al contenido de la grilla*/
+	color: #000;
+	font-size: 12px;
+	font-family: verdana;
+}
+
+h1{text-align:center;font-family: Verdana;}
+
+.ui-widget{font-family:Arial; color:#fff;}
+.ui-jqgrid .ui-jqgrid-hdiv {height:25px;} /*tamaño barra titulos*/
+.ui-jqgrid tr.jqgrow td{height:40px;}
+.ui-jqgrid .ui-jqgrid-pager {height:40px;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	/*da tamaño texto de barra titulos y botones escritos*/	
+	font-size: 14px;
+	color: #000;
+}
+.ui-widget-content{
+	border: 1px solid #7DCBFF;
+}
+
+#footer{
+	margin: auto;
+	float: left;
+	position:relative;
+	left:10px;
+	top:10px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	}
+
+#cuerpodepot{
+font-family: Verdana;
+}
+
+#linea1{
+border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;
+}
